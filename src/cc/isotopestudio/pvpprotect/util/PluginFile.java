@@ -48,7 +48,7 @@ public class PluginFile extends YamlConfiguration {
     /**
      * Reload configuration
      */
-    public void reload() {
+    private void reload() {
 
         if (!file.exists()) {
             try {
@@ -114,7 +114,4 @@ public class PluginFile extends YamlConfiguration {
     }
 
 
-    public File getFile() {
-        return file;
-    }
 }

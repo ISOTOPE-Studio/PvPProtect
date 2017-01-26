@@ -1,0 +1,12 @@
+name: PvPProtect
+main: cc.isotopestudio.pvpprotect.PvPProtect
+
+author: Mars
+description: PvPProtect
+website: http://isotopestudio.cc
+version: 1.0.0
+
+commands:
+  pvpon:
+    description: PvPProtect
+    usage: /<command>
