@@ -11,8 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class PvPProtect extends JavaPlugin {
 
     private static final String pluginName = "PvPProtect";
-    public static final String prefix = (new StringBuilder()).append(ChatColor.GOLD).append(ChatColor.BOLD).append("[")
-            .append("PvPProtect").append("]").append(ChatColor.RED).toString();
+    public static final String prefix = "§8[§a新手保护§8] ";
 
     public static PluginFile playerData;
 

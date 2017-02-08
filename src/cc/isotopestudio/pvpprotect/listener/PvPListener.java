@@ -15,7 +15,7 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import static cc.isotopestudio.pvpprotect.PvPProtect.playerData;
 
 public class PvPListener implements Listener {
-    
+
     private static final String MSG1 = S.toPrefixRed("你无法PvP 输入 /pvpon 提前结束新手保护");
     private static final String MSG2 = S.toPrefixRed("此玩家无法PvP");
 
@@ -29,7 +29,7 @@ public class PvPListener implements Listener {
                 if (playerData.getBoolean(player.getName())) {
                     event.setCancelled(true);
                     player.sendMessage(MSG1);
-                    event.getEntity().sendMessage(MSG2);
+                    ((Player) event.getEntity()).sendMessage(MSG2);
                 }
             }
         } else if (event.getDamager() instanceof Projectile) {
@@ -39,7 +39,7 @@ public class PvPListener implements Listener {
                     if (playerData.getBoolean(player.getName())) {
                         event.setCancelled(true);
                         player.sendMessage(MSG1);
-                        event.getEntity().sendMessage(MSG2);
+                        ((Player) event.getEntity()).sendMessage(MSG2);
                     }
                 }
             }
